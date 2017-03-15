@@ -4,17 +4,23 @@ function multipleReturn () {
   return ([10,5,16]);
 }
 
-var x,y,z;
+var x,y,z; // Define 3 new variables.
 
-var arr = multipleReturn();
+var arr = multipleReturn(); // Take the return as an array.
 
-[x,y,z] = multipleReturn();
+[x,y,z] = multipleReturn(); // Assigns return values in order.
 
 console.log(arr);
 console.log(y);
 console.log(typeof(arr), typeof(y));
 
+// ES6 introduced default values for function params.
+//
 function defaultVals(x=1, y=2, z=3) {
+  // old way for default values
+  // if (!x) {
+    // x = 1;
+  // }
   console.log(x,y,z);
 }
 
@@ -23,7 +29,7 @@ defaultVals(10,6);
 defaultVals(4, undefined, 6);
 
 //args variable is an array holding the passed function arguments
-function function_one(...args)
+function function_one(...args) // converts arguments into an array.
 {
     console.log(args);
     console.log(args.length);
@@ -41,7 +47,7 @@ function function_two(a, b, ...args)
 }
 
 //"args" holds only 7 and 9
-function_two(1, 5, 7, 9);
+function_two(1, 5, 7, 9); // a=1, b=5, args=[7,9]
 
 function function_name(a, b)
 {

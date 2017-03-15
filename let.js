@@ -3,16 +3,18 @@
 function test () {
   var x = 10; // function level scope.
 
-  for (let i=0; i<5; i++) { // 
+  for (let i=0; i<5; i++) { // block level scope
     console.log(i);
   }
 
-  for (var j=0; j<5; j++) {
+  for (var j=0; j<5; j++) { // another function level scope
     console.log(j);
   }
 
   console.log("now j is ", j);
   console.log(x);
+  // console.log("now i is ", i);
+
   try {
     console.log("now i is ", i);  // this causes an error, i is not defined
   }
@@ -35,7 +37,7 @@ function constTest() {
     const z = 4;
   }
 
-  console.log(z); // z is not defined here.
+  // console.log(z); // z is not defined here.
   x = 12; // cannot reassign to a const variable.
 }
 
