@@ -1,9 +1,9 @@
 // Example of block level scope with the let keyword
 
 function test () {
-  var x = 10;
+  var x = 10; // function level scope.
 
-  for (let i=0; i<5; i++) {
+  for (let i=0; i<5; i++) { // 
     console.log(i);
   }
 
