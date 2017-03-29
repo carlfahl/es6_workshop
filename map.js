@@ -3,10 +3,9 @@ var map = new Map();
 
 //add three keys & values to the map
 map.set({x: 12}, 12);
-
-//same key is overwritten
 map.set(44, 13);
-map.set(44, 12);
+map.set(44, 12); //same key is overwritten
+map.set(43, 12);
 
 console.log(map);
 
@@ -28,8 +27,12 @@ for(var i of map)
 //delete all keys
 map.clear();
 
+console.log('Cleared map: ', map);
+
 //create a map from arrays
 var map_1 = new Map([[1, 2], [4, 5]]);
+
+console.log(map_1);
 
 //size of map
 console.log(map_1.size); //2
